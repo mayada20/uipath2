@@ -116,16 +116,17 @@
       <AssemblyReference>System.Linq.Parallel</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="compare_theBestSeller_between_Manufacturing_DATA_2024_And_EngCode_" sap:VirtualizedContainerService.HintSize="1080,5319.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="compare_theBestSeller_between_Manufacturing_DATA_2024_And_EngCode_" sap:VirtualizedContainerService.HintSize="1156,4707.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="848.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;compare_theBestSeller_between Manufacturing_DATA_2024 And EngCode process is start&quot;]" />
-    <TryCatch sap2010:Annotation.AnnotationText="compare the Best Seller from each row “Manufacturing_DATA_2024” file with its code and if the code is mapped to the Best Seller correctly then the robot will skip this row (No Needed action).If the Best Seller is not the same so new column will be added “COMMENT”, and the robot will write “Incorrect Best Seller”" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="848.8,4956" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="916.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;compare_theBestSeller_between Manufacturing_DATA_2024 And EngCode process is start&quot;]" />
+    <TryCatch sap2010:Annotation.AnnotationText="compare the Best Seller from each row “Manufacturing_DATA_2024” file with its code and if the code is mapped to the Best Seller correctly then the robot will skip this row (No Needed action).If the Best Seller is not the same so new column will be added “COMMENT”, and the robot will write “Incorrect Best Seller”" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="916.8,4344" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -134,16 +135,16 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="812,4609.6" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:05">
+        <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="880,4013.6" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:05">
           <ui:RetryScope.ActivityBody>
             <ActivityAction>
-              <Sequence DisplayName="seq()" sap:VirtualizedContainerService.HintSize="770.4,4433.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <Sequence DisplayName="seq()" sap:VirtualizedContainerService.HintSize="838.4,3837.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Seq(check in_Arg)" sap:VirtualizedContainerService.HintSize="736.8,827.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence DisplayName="Seq(check in_Arg)" sap:VirtualizedContainerService.HintSize="804.8,827.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -174,7 +175,7 @@
                     </If.Else>
                   </If>
                 </Sequence>
-                <Sequence DisplayName="Seq(pre condition)_check if ENGCODES data table and Manufactring datatable after filering are not empty" sap:VirtualizedContainerService.HintSize="736.8,827.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Seq(pre condition)_check if ENGCODES data table and Manufactring datatable after filering are not empty" sap:VirtualizedContainerService.HintSize="804.8,827.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="boolACMESystem1" />
                     <Variable x:TypeArguments="x:Boolean" Name="boolDashboard" />
@@ -213,7 +214,7 @@
                     </If.Else>
                   </If>
                 </Sequence>
-                <Sequence DisplayName="Seq(Action)_if the BestSeller value in two data table are same values we do NOTHING and if they are diffrent they put &quot;Incorrect Best Seller&quot; in comment colum wadded" sap:VirtualizedContainerService.HintSize="736.8,1900.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Seq(Action)_if the BestSeller value in two data table are same values we do NOTHING and if they are diffrent they put &quot;Incorrect Best Seller&quot; in comment colum wadded" sap:VirtualizedContainerService.HintSize="804.8,1304.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="strManufactringdata" />
                   </Sequence.Variables>
@@ -222,67 +223,88 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Comment" DataTable="[in_DtManufactringData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="703.2,220" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" />
-                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_DtEngCode]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="703.2,1162.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
-                    <ui:ForEachRow.Body>
-                      <ActivityAction x:TypeArguments="sd:DataRow">
-                        <ActivityAction.Argument>
-                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
-                        </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="668.8,964.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                          <Sequence.Variables>
-                            <Variable x:TypeArguments="x:String" Name="CodeValue" />
-                            <Variable x:TypeArguments="x:String" Name="BestsellerValue" />
-                          </Sequence.Variables>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_DtManufactringData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="635.2,904.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
-                            <ui:ForEachRow.Body>
-                              <ActivityAction x:TypeArguments="sd:DataRow">
-                                <ActivityAction.Argument>
-                                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row2" />
-                                </ActivityAction.Argument>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="601.6,716" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                                  <Sequence.Variables>
-                                    <Variable x:TypeArguments="x:String" Name="CodeValue2" />
-                                    <Variable x:TypeArguments="x:String" Name="BestsellerValue2" />
-                                  </Sequence.Variables>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <If Condition="[row(&quot;CODE&quot;).ToString.Trim = row2(&quot;CODE&quot;).ToString.Trim]" sap:VirtualizedContainerService.HintSize="568,656" sap2010:WorkflowViewState.IdRef="If_4">
-                                    <If.Then>
-                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="534.4,411.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Comment" DataTable="[in_DtManufactringData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="771.2,220" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" />
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="771.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="736,1155.2" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_DtEngCode]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="702.4,1095.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                          <ui:ForEachRow.Body>
+                            <ActivityAction x:TypeArguments="sd:DataRow">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="668.8,906.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="x:String" Name="CodeValue" />
+                                  <Variable x:TypeArguments="x:String" Name="BestsellerValue" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_DtManufactringData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="635.2,846.4" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                                  <ui:ForEachRow.Body>
+                                    <ActivityAction x:TypeArguments="sd:DataRow">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row2" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="601.6,657.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                        <Sequence.Variables>
+                                          <Variable x:TypeArguments="x:String" Name="CodeValue2" />
+                                          <Variable x:TypeArguments="x:String" Name="BestsellerValue2" />
+                                        </Sequence.Variables>
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <If Condition="[row(&quot;BestSeller&quot;).ToString.Trim &lt;&gt; row2(&quot;BestSeller&quot;).ToString.Trim]" sap:VirtualizedContainerService.HintSize="500.8,351.2" sap2010:WorkflowViewState.IdRef="If_7">
+                                        <If Condition="[row(&quot;CODE&quot;).ToString.Trim = row2(&quot;CODE&quot;).ToString.Trim]" sap:VirtualizedContainerService.HintSize="568,597.6" sap2010:WorkflowViewState.IdRef="If_4">
                                           <If.Then>
-                                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="534.4,411.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_4">
-                                                <Assign.To>
-                                                  <OutArgument x:TypeArguments="x:Object">[row2("Comment")]</OutArgument>
-                                                </Assign.To>
-                                                <Assign.Value>
-                                                  <InArgument x:TypeArguments="x:Object">["Incorrect Best Seller"]</InArgument>
-                                                </Assign.Value>
-                                              </Assign>
+                                              <If Condition="[row(&quot;BestSeller&quot;).ToString.Trim &lt;&gt; row2(&quot;BestSeller&quot;).ToString.Trim]" sap:VirtualizedContainerService.HintSize="500.8,351.2" sap2010:WorkflowViewState.IdRef="If_7">
+                                                <If.Then>
+                                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                                      <Assign.To>
+                                                        <OutArgument x:TypeArguments="x:Object">[row2("Comment")]</OutArgument>
+                                                      </Assign.To>
+                                                      <Assign.Value>
+                                                        <InArgument x:TypeArguments="x:Object">["Incorrect Best Seller"]</InArgument>
+                                                      </Assign.Value>
+                                                    </Assign>
+                                                  </Sequence>
+                                                </If.Then>
+                                                <If.Else>
+                                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </Sequence>
+                                                </If.Else>
+                                              </If>
                                             </Sequence>
                                           </If.Then>
                                           <If.Else>
-                                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -293,31 +315,73 @@
                                           </If.Else>
                                         </If>
                                       </Sequence>
-                                    </If.Then>
-                                    <If.Else>
-                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,83.2" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </Sequence>
-                                    </If.Else>
-                                  </If>
-                                </Sequence>
-                              </ActivityAction>
-                            </ui:ForEachRow.Body>
-                          </ui:ForEachRow>
-                        </Sequence>
-                      </ActivityAction>
-                    </ui:ForEachRow.Body>
-                  </ui:ForEachRow>
-                  <ui:OutputDataTable DataTable="[in_DtManufactringData]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="703.2,112.8" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[strManufactringdata]" />
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="703.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;the data table After comparing:&quot;+vbcr+strManufactringdata]" />
-                  <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_DtManufactringData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="703.2,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="sheet1" WorkbookPath="[in_Result_DIR]" />
+                                    </ActivityAction>
+                                  </ui:ForEachRow.Body>
+                                </ui:ForEachRow>
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:ForEachRow.Body>
+                        </ui:ForEachRow>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <Sequence DisplayName="Sequence(Use LINQ )" sap:VirtualizedContainerService.HintSize="771.2,509.6" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="scg:IEnumerable(sd:DataRow)" Name="Query" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="500.8,115.2" sap2010:WorkflowViewState.IdRef="Assign_6">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="scg:IEnumerable(sd:DataRow)">[Query]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="scg:IEnumerable(sd:DataRow)" xml:space="preserve">[From row1 In in_DtEngCode.AsEnumerable()
+Join row2 In in_DtManufactringData.AsEnumerable()
+On row1("CODE").ToString() Equals row2("CODE").ToString()
+Where row1("BestSeller").ToString() &lt;&gt; row2("BestSeller").ToString()
+ Select row2]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:ForEach x:TypeArguments="sd:DataRow" CurrentIndex="{x:Null}" DisplayName="For Each row" sap:VirtualizedContainerService.HintSize="500.8,302.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Query]">
+                      <ui:ForEach.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_7">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Object">[row("Comment")]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Object">["Bestseller correct"]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEach.Body>
+                    </ui:ForEach>
+                  </Sequence>
+                  <ui:OutputDataTable DataTable="[in_DtManufactringData]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="771.2,112.8" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[strManufactringdata]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="771.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;the data table After comparing:&quot;+vbcr+strManufactringdata]" />
+                  <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_DtManufactringData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="771.2,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="sheet1" WorkbookPath="[in_Result_DIR]" />
                 </Sequence>
-                <Sequence DisplayName="Seq(post condition)_check if comment colum is added and contain data" sap:VirtualizedContainerService.HintSize="736.8,818.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Seq(post condition)_check if comment colum is added and contain data" sap:VirtualizedContainerService.HintSize="804.8,818.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="boolACMESystem1" />
                     <Variable x:TypeArguments="x:Boolean" Name="boolDashboard" />
